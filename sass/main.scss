@@ -1,0 +1,74 @@
+@use "./components" as components;
+@use "./cards" as cards;
+@use "./phone" as phone;
+@use "./contact" as contact;
+@use "./header" as header;
+@use "./accordion" as accordion;
+@use "./colors" as colors;
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: "Abril Fatface", serif;
+	font-family: "Poppins", sans-serif;
+	background-color: colors.$accordionBtn;
+	scroll-behavior: smooth;
+	scroll-padding: 6rem;
+}
+
+.bodyScroll {
+	overflow: hidden;
+}
+
+html {
+	font-size: 10px;
+	color: colors.$text;
+}
+
+ul,
+ol {
+	list-style: none;
+	padding-left: 0;
+	margin: 0;
+	height: 4rem;
+}
+
+a {
+	text-transform: uppercase;
+	text-decoration: none;
+	color: colors.$text;
+	cursor: pointer;
+}
+
+h2,
+h1 {
+	text-transform: uppercase;
+}
+h1 {
+	font-size: 3.5rem;
+
+	span {
+		text-transform: lowercase;
+	}
+}
+
+.wrapper {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1200px;
+}
+
+@media (min-width: 574px) {
+	h1 {
+		font-size: 4.5rem;
+	}
+	h2 {
+		font-size: 4rem;
+	}
+}

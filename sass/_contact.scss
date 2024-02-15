@@ -1,0 +1,115 @@
+@use "./colors" as colors;
+.contact {
+	// background-image: colors.$contactBg,
+	// 	url("../img/nowoczesne-strony-internetowe.jpeg");
+
+	background-size: cover;
+	background-position: center;
+
+	&__title {
+		font-size: 2rem;
+		padding-top: 5rem;
+
+		text-align: center;
+		font-weight: bold;
+	}
+
+	&__wrapper {
+		color: colors.$text;
+		padding: 50px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	&__text {
+		font-weight: 400;
+		font-style: normal;
+		font-size: 1.6rem;
+		letter-spacing: 0.03em;
+		color: colors.$text;
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		line-height: 1.6;
+		gap: 10px;
+	}
+	&__text-link {
+		color: colors.$textAccordion;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		font-size: 1.8rem;
+		padding: 0.2rem;
+		transition: color 1s ease;
+
+		&:hover,
+		&:focus {
+			color: colors.$action;
+		}
+
+		i {
+			margin-right: 0.5rem;
+			color: colors.$action;
+		}
+	}
+}
+
+@media (max-width: 575px) {
+	.contact {
+		background-image: colors.$contactBg,
+			url("../img/nowoczesne-strony-internetowe-mobilne.jpg");
+	}
+}
+
+@media (min-width: 768px) {
+	.contact {
+		background-image: linear-gradient(
+				rgba(0, 41, 102, 0.44),
+				rgba(2, 1, 19, 0.84)
+			),
+			url("../img/nowoczesne-strony-internetowe.jpg");
+
+		&__wrapper {
+			justify-content: flex-start;
+		}
+		&__text {
+			text-align: left;
+		}
+		&__text-link {
+			justify-content: flex-start;
+		}
+	}
+}
+
+// .footer {
+// 	background-color: rgba(2, 1, 19, 0.84);
+
+// 	border-top: 1px solid rgba(255, 255, 255, 0.6);
+// 	&__text {
+// 		padding: 2rem;
+// 		text-align: center;
+// 		color: colors.$text;
+// 		font-size: 1.5rem;
+// 	}
+// }
+
+.footer {
+	background-color: rgba(2, 1, 19, 0.84);
+	border-top: 1px solid rgba(255, 255, 255, 0.6);
+	&__text {
+		padding: 1rem;
+		text-align: center;
+		// color: colors.$text;
+		color: #fff;
+		font-size: 1.5rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-weight: bold;
+		img {
+			margin-left: 10px;
+			margin-bottom: 5px;
+		}
+	}
+}

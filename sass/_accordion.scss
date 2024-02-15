@@ -1,0 +1,367 @@
+@use "./colors" as colors;
+
+.accordion {
+	margin: 7rem 0;
+	&__wrapper {
+		padding: 1rem;
+	}
+	&__span {
+		font-weight: bold;
+	}
+	&__img {
+		padding: 1rem;
+
+		filter: brightness(85%);
+		background-size: cover;
+		background-position: center;
+		background-attachment: fixed;
+		height: 250px;
+		width: 100%;
+	}
+
+	&__btn {
+		padding: 2.5rem;
+		width: 100%;
+		font-size: 1.8rem;
+		text-align: left;
+		border: none;
+		cursor: pointer;
+		transition: background-color 0.3s;
+		color: colors.$text;
+		background-color: colors.$accordionBtn;
+		text-transform: uppercase;
+		transition: color 0.8s ease;
+		transition: font-size 0.8s ease;
+
+		svg {
+			float: right;
+		}
+	}
+
+	&__btn:hover,
+	&__btn:focus {
+		background-color: colors.$accordionBtn;
+		color: #fff;
+		outline: none;
+		font-weight: bold;
+		font-size: 2rem;
+	}
+
+	&__text-box {
+		margin-left: 10px;
+		padding: 1rem 2rem;
+		display: none;
+		color: colors.$text;
+	}
+
+	&__text {
+		font-size: 1.6rem;
+		padding: 20px;
+		text-align: center;
+		line-height: 1.6;
+	}
+	&__text1 {
+		font-size: 2.2rem;
+		font-weight: bold;
+		padding: 20px;
+		text-align: center;
+	}
+	&__active {
+		display: block;
+	}
+}
+
+.accordion__text {
+	&-one__list {
+		color: colors.$textAccordion;
+		display: flex;
+		margin: 2rem;
+		align-items: center;
+
+		i {
+			font-size: 4rem;
+			margin-right: 1rem;
+			color: colors.$action;
+		}
+		p {
+			font-size: 1.5rem;
+		}
+	}
+}
+
+@media (max-width: 575px) {
+	.accordion {
+		&__img {
+			background-image: url("../img/oferta-strony-indywidualne-mobilne.jpg");
+		}
+	}
+}
+
+@media (min-width: 574px) {
+	.accordion__text-one__list i {
+		font-size: 5rem;
+	}
+}
+
+@media (min-width: 576px) {
+	.accordion {
+		&__img {
+			background-image: url("../img/oferta-strony-indywidualne.jpg");
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.accordion__text {
+		&-one {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: center;
+		}
+		&-one__list {
+			width: calc(50% - 10rem);
+			max-width: 350px;
+		}
+	}
+}
+
+.optimization {
+	margin: 2rem auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 2rem auto;
+
+	gap: 10px;
+	&__card {
+		width: calc(100% - 2rem);
+		padding: 3em;
+
+		border-radius: 20px;
+		background-image: linear-gradient(
+				rgba(0, 41, 102, 0.274),
+				rgba(2, 1, 19, 0.644)
+			),
+			url("../img/aplikacje-biznesowe-mobilne.jpg");
+		filter: brightness(85%);
+		background-size: cover;
+		background-position: center;
+		background-attachment: fixed;
+		transition: background-color 0.5s, color 0.5s;
+		color: #fff;
+		box-shadow: 0 0 10px #ffffff4f;
+		transition: color 1s ease;
+
+		&:hover,
+		&:focus {
+			color: colors.$accordionBtn;
+			background-image: linear-gradient(
+					rgba(0, 41, 102, 0.5),
+					rgba(228, 227, 252, 0.904)
+				),
+				url("../img/aplikacje-biznesowe-mobilne.jpg");
+		}
+	}
+
+	&__text {
+		font-size: 1.6rem;
+		text-align: center;
+		text-transform: uppercase;
+
+		font-weight: bold;
+	}
+	&__text-two {
+		color: colors.$action;
+		font-size: 1.8rem;
+	}
+	&__span {
+		font-weight: bold;
+		font-size: 2.2rem;
+		padding: 20px;
+		text-align: center;
+	}
+}
+
+@media (min-width: 768px) {
+	.optimization {
+		gap: 30px;
+
+		&__card {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: calc(33.33% - 2rem);
+			min-height: 250px;
+			background-image: linear-gradient(
+					rgba(0, 41, 102, 0.274),
+					rgba(2, 1, 19, 0.644)
+				),
+				url("../img/aplikacje-biznesowe.jpg");
+
+			&:hover,
+			&:focus {
+				color: colors.$accordionBtn;
+				background-image: linear-gradient(
+						rgba(0, 41, 102, 0.5),
+						rgba(228, 227, 252, 0.904)
+					),
+					url("../img/aplikacje-biznesowe-mobilne.jpg");
+			}
+		}
+
+		// &__card:hover {
+		//   background-image: linear-gradient(
+		//       rgba(0, 41, 102, 0.5),
+		//       rgba(228, 227, 252, 0.904)
+		//     ),
+		//     url("../img/aplikacje-biznesowe.jpeg");
+		// }
+		&__text {
+			padding: 2rem 1rem;
+			font-size: 2rem;
+		}
+	}
+}
+
+.seo {
+	&__img {
+		width: 100%;
+		height: 300px;
+		background-image: url("../img/pozycjonowanie-stron-mobilne.jpg");
+		background-size: cover;
+		background-position: center;
+	}
+	&__text {
+		font-size: 1.6rem;
+		padding-top: 20px;
+		text-align: center;
+		line-height: 1.6;
+	}
+	&__text-two {
+		color: colors.$action;
+		font-size: 1.8rem;
+	}
+}
+
+@media (min-width: 574px) {
+	.seo {
+		padding: 1rem;
+		&__img {
+			width: 45%;
+			float: left;
+			margin: 30px;
+			background-image: url("../img/pozycjonowanie-stron.jpg");
+		}
+		&__text {
+			text-align: left;
+		}
+	}
+}
+
+.templates {
+	&__img {
+		width: 100%;
+		height: 350px;
+		background-image: url("../img/szablony-stron-internetowych-mobilne.jpg");
+		background-size: cover;
+		background-position: center;
+	}
+	&__text {
+		font-size: 1.6rem;
+		padding-top: 20px;
+		text-align: center;
+		line-height: 1.6;
+	}
+	&__text-two {
+		color: colors.$action;
+		font-size: 1.8rem;
+	}
+}
+
+@media (min-width: 574px) {
+	.templates {
+		padding: 1rem;
+		&__img {
+			width: 50%;
+			float: right;
+			margin: 30px;
+			background-image: url("../img/szablony-stron-internetowych.jpg");
+		}
+		&__text {
+			text-align: right;
+		}
+	}
+}
+
+.applications {
+	&__img {
+		width: 100%;
+		height: auto;
+		height: 300px;
+		background-image: url("../img/aplikacje-bines-mobilne.jpg");
+		background-size: cover;
+		background-position: center;
+	}
+	&__text {
+		font-size: 1.6rem;
+		padding-top: 20px;
+		text-align: center;
+		line-height: 1.6;
+	}
+	&__text-two {
+		color: colors.$action;
+		font-size: 1.8rem;
+	}
+}
+
+@media (min-width: 574px) {
+	.applications {
+		padding: 1rem;
+		&__img {
+			width: 55%;
+			float: left;
+			margin: 30px;
+			background-image: url("../img/aplikacje-bines.jpg");
+		}
+		&__text {
+			text-align: left;
+			padding: 30px;
+		}
+	}
+}
+
+.e-commerce {
+	&__img {
+		width: 100%;
+		height: 260px;
+		background-image: url("../img/ecommerce-sklepy-mobilne.jpg");
+		background-size: cover;
+		background-position: center;
+	}
+	&__text {
+		font-size: 1.6rem;
+		padding-top: 20px;
+		text-align: center;
+		line-height: 1.6;
+	}
+	&__text-two {
+		color: colors.$action;
+		font-size: 1.8rem;
+	}
+}
+
+@media (min-width: 574px) {
+	.e-commerce {
+		padding: 1rem;
+		&__img {
+			width: 49%;
+			float: right;
+			margin: 30px;
+			background-image: url("../img/ecommerce-sklepy.jpg");
+		}
+		&__text {
+			text-align: right;
+		}
+	}
+}

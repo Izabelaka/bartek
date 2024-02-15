@@ -1,0 +1,862 @@
+@charset "UTF-8";
+.color-action {
+  color: #fa9000;
+}
+
+.navigation {
+  position: fixed;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  height: 6rem;
+  width: 100%;
+  background-color: rgba(5, 2, 57, 0.84);
+  font-size: 1.6rem;
+  font-weight: bold;
+  z-index: 2000;
+}
+.navigation__list {
+  display: flex;
+  align-items: center;
+  margin-right: 6rem;
+  gap: 2rem;
+}
+.navigation__list a {
+  font-size: 2rem;
+  display: inline-block;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+.navigation__logo a {
+  margin-left: 6rem;
+  font-size: 2rem;
+}
+
+.navigation__list a:hover,
+a:focus {
+  color: #fa9000;
+  transform: scale(1.1);
+}
+
+.mobile-navLogo {
+  position: absolute;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-left: 2rem;
+  margin-top: 4rem;
+  z-index: 10000;
+}
+
+.mobile-nav {
+  display: none;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background-image: url("../img/strony-internetowe-aplikacje.jpeg");
+  background-size: cover;
+  background-position: center;
+  z-index: 9000;
+  overflow-y: auto;
+}
+.mobile-nav__list {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-size: 4rem;
+  font-weight: bold;
+  gap: 5rem;
+  overflow-y: hidden;
+}
+.mobile-nav__active {
+  display: block;
+}
+
+.mobile-nav__btn {
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: flex;
+  padding: 0;
+  margin-right: 1.5rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 11000;
+  color: rgba(247, 239, 229, 0.9176470588);
+}
+
+.line {
+  fill: none;
+  stroke: rgba(247, 239, 229, 0.9176470588);
+  stroke-width: 6;
+  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1), stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line1 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
+
+.line2 {
+  stroke-dasharray: 60 60;
+  stroke-width: 6;
+}
+
+.line3 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
+
+.opened .line1 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}
+
+.opened .line2 {
+  stroke-dasharray: 1 60;
+  stroke-dashoffset: -30;
+  stroke-width: 6;
+}
+
+.opened .line3 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}
+
+@media (min-width: 768px) {
+  .mobile-nav__btn {
+    display: none;
+  }
+  .navigation {
+    display: flex;
+  }
+  .mobile-nav {
+    display: none;
+  }
+  .mobile-navLogo {
+    display: none;
+  }
+}
+.section {
+  padding: 5rem 2rem;
+}
+.section__title {
+  font-size: 2rem;
+  margin: 1rem;
+  text-align: center;
+  font-weight: bold;
+}
+.section h2 {
+  padding-bottom: 2rem;
+}
+.section p {
+  padding: 1rem;
+  font-weight: 400;
+  text-align: center;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+  word-spacing: 1px;
+  font-size: 1.6rem;
+}
+.section p:nth-child(3) {
+  color: #fa9000;
+  font-weight: 700;
+}
+
+.cards {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.cards h2 {
+  font-size: 3rem;
+}
+.cards__button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 6rem;
+  text-shadow: 2px 2px 5px rgb(0, 0, 0);
+  color: #fa9000;
+  z-index: 100;
+}
+.cards__card {
+  position: relative;
+  margin: 2rem;
+  height: 40rem;
+  text-align: center;
+  background-position: center;
+  background-size: cover;
+  border-radius: 15px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+}
+.cards__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+  padding: 4rem 3rem;
+  background-color: rgba(5, 2, 57, 0.84);
+  color: rgba(247, 239, 229, 0.9176470588);
+  -webkit-clip-path: circle(0% at 50% 90%);
+          clip-path: circle(0% at 50% 90%);
+  transition: -webkit-clip-path 2s;
+  transition: clip-path 2s;
+  transition: clip-path 2s, -webkit-clip-path 2s;
+}
+.cards__text h2 {
+  margin: 2rem;
+}
+.cards__text p {
+  margin-bottom: 4rem;
+}
+
+.cards__button:hover ~ .cards__text {
+  -webkit-clip-path: circle(110% at 50% 90%);
+          clip-path: circle(110% at 50% 90%);
+}
+
+.textButton {
+  position: absolute;
+  display: block;
+  height: 4rem;
+  width: 12rem;
+  margin-bottom: 2rem;
+  border: none;
+  z-index: 100;
+  border-radius: 20px;
+  text-transform: uppercase;
+  background-color: #fa9000;
+  bottom: 1rem;
+  left: 50%;
+  transform: translate(-50%, 0);
+  cursor: pointer;
+  font-weight: bold;
+  color: rgba(247, 239, 229, 0.9176470588);
+  overflow: hidden;
+  transition: font-size 1s;
+}
+
+.textButton::before,
+::after {
+  position: absolute;
+  content: "";
+  transition: 2s;
+  z-index: -1;
+}
+
+.textButton::before {
+  top: -30px;
+  left: -130px;
+  height: 400%;
+  width: 100px;
+  background-image: linear-gradient(-90deg, rgba(255, 102, 0, 0.3), rgba(255, 145, 0, 0.5));
+  transform: rotate(15deg);
+}
+
+.textButton:hover::before {
+  left: 130%;
+  font-size: 2rem;
+}
+
+.textButton:hover {
+  font-size: 1.5rem;
+}
+
+@media (max-width: 575px) {
+  .cards__card {
+    width: calc(100% - 4rem); /* Odejmujemy marginesy, aby zapewnić odstępy */
+    margin: 2rem; /* Utrzymaj jednolite marginesy wokół kart */
+  }
+  .cards__bgWeb {
+    background-image: url("../img/strony-internetowe-mobilne.jpg");
+  }
+  .cards__bgWebs {
+    background-image: url("../img/szablony-stron-internetowych-mobilne.jpg");
+  }
+  .cards__bgApp {
+    background-image: url("../img/aplikacje-bines-mobilne.jpg");
+  }
+  .cards__bgEcommerce {
+    background-image: url("../img/ecommerce-sklepy-mobilne.jpg");
+  }
+  .cards__bgBusiness {
+    background-image: url("../img/aplikacje-biznesowe-mobilne.jpg");
+  }
+  .cards__bgSeo {
+    background-image: url("../img/pozycjonowanie-stron-mobilne.jpg");
+  }
+}
+@media (min-width: 576px) and (max-width: 991px) {
+  .cards__card {
+    width: calc(50% - 4rem); /* Przykładowa wartość */
+  }
+}
+@media (min-width: 576px) {
+  .cards__bgWeb {
+    background-image: url("../img/strony-internetowe.jpg");
+  }
+  .cards__bgWebs {
+    background-image: url("../img/szablony-stron-internetowych.jpg");
+  }
+  .cards__bgApp {
+    background-image: url("../img/aplikacje-bines.jpg");
+  }
+  .cards__bgEcommerce {
+    background-image: url("../img/ecommerce-sklepy.jpg");
+  }
+  .cards__bgBusiness {
+    background-image: url("../img/aplikacje-biznesowe.jpg");
+  }
+  .cards__bgSeo {
+    background-image: url("../img/pozycjonowanie-stron.jpg");
+  }
+}
+@media (min-width: 992px) {
+  .cards__card {
+    width: calc(33.33% - 10rem);
+  }
+}
+.phone-btn {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 1rem;
+  background-color: rgba(28, 174, 28, 0.982);
+  border: 1px solid rgb(17, 135, 17);
+  border-radius: 50%;
+  padding: 1rem;
+  cursor: pointer;
+  box-shadow: 0px 4px 36px -11px rgb(0, 0, 0);
+  z-index: 12000;
+}
+
+@media (min-width: 992px) {
+  .phone-btn {
+    display: none;
+  }
+}
+.contact {
+  background-size: cover;
+  background-position: center;
+}
+.contact__title {
+  font-size: 2rem;
+  padding-top: 5rem;
+  text-align: center;
+  font-weight: bold;
+}
+.contact__wrapper {
+  color: rgba(247, 239, 229, 0.9176470588);
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact__text {
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.6rem;
+  letter-spacing: 0.03em;
+  color: rgba(247, 239, 229, 0.9176470588);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  line-height: 1.6;
+  gap: 10px;
+}
+.contact__text-link {
+  color: rgba(255, 255, 255, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  padding: 0.2rem;
+  transition: color 1s ease;
+}
+.contact__text-link:hover, .contact__text-link:focus {
+  color: #fa9000;
+}
+.contact__text-link i {
+  margin-right: 0.5rem;
+  color: #fa9000;
+}
+
+@media (max-width: 575px) {
+  .contact {
+    background-image: linear-gradient(rgba(0, 41, 102, 0.44), rgba(2, 1, 19, 0.84)), url("../img/nowoczesne-strony-internetowe-mobilne.jpg");
+  }
+}
+@media (min-width: 768px) {
+  .contact {
+    background-image: linear-gradient(rgba(0, 41, 102, 0.44), rgba(2, 1, 19, 0.84)), url("../img/nowoczesne-strony-internetowe.jpg");
+  }
+  .contact__wrapper {
+    justify-content: flex-start;
+  }
+  .contact__text {
+    text-align: left;
+  }
+  .contact__text-link {
+    justify-content: flex-start;
+  }
+}
+.footer {
+  background-color: rgba(2, 1, 19, 0.84);
+  border-top: 1px solid rgba(255, 255, 255, 0.6);
+}
+.footer__text {
+  padding: 1rem;
+  text-align: center;
+  color: #fff;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+.footer__text img {
+  margin-left: 10px;
+  margin-bottom: 5px;
+}
+
+.video-header {
+  position: relative;
+  overflow: hidden;
+  height: 60rem;
+  z-index: -1;
+}
+
+.video-header video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.main-header {
+  filter: brightness(85%);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 500px;
+}
+
+.offers-header {
+  background-image: url("../img/oferta-strony-internetowe.jpeg");
+  filter: brightness(85%);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 600px;
+}
+
+.offers-header2 {
+  background-image: url("../img/aplikacje-strony-internetowe.jpeg");
+  filter: brightness(85%);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 400px;
+}
+
+@media (max-width: 575px) {
+  .main-header {
+    background-image: url("../img/stronyinternetowe-mobilne.jpg");
+  }
+  .offers-header {
+    background-image: url("../img/oferta-strony-internetowe-mobilne.jpg");
+  }
+}
+@media (min-width: 576px) {
+  .main-header {
+    background-image: url("../img/stronyinternetowe.jpg");
+  }
+  .offers-header {
+    background-image: url("../img/oferta-strony-internetowe.jpg");
+  }
+}
+@media only screen and (max-width: 768px) {
+  .offers-header {
+    background-attachment: scroll;
+    background-size: 100% auto;
+    background-position: top center;
+  }
+}
+.accordion {
+  margin: 7rem 0;
+}
+.accordion__wrapper {
+  padding: 1rem;
+}
+.accordion__span {
+  font-weight: bold;
+}
+.accordion__img {
+  padding: 1rem;
+  filter: brightness(85%);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 250px;
+  width: 100%;
+}
+.accordion__btn {
+  padding: 2.5rem;
+  width: 100%;
+  font-size: 1.8rem;
+  text-align: left;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  color: rgba(247, 239, 229, 0.9176470588);
+  background-color: #07022e;
+  text-transform: uppercase;
+  transition: color 0.8s ease;
+  transition: font-size 0.8s ease;
+}
+.accordion__btn svg {
+  float: right;
+}
+.accordion__btn:hover, .accordion__btn:focus {
+  background-color: #07022e;
+  color: #fff;
+  outline: none;
+  font-weight: bold;
+  font-size: 2rem;
+}
+.accordion__text-box {
+  margin-left: 10px;
+  padding: 1rem 2rem;
+  display: none;
+  color: rgba(247, 239, 229, 0.9176470588);
+}
+.accordion__text {
+  font-size: 1.6rem;
+  padding: 20px;
+  text-align: center;
+  line-height: 1.6;
+}
+.accordion__text1 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  padding: 20px;
+  text-align: center;
+}
+.accordion__active {
+  display: block;
+}
+
+.accordion__text-one__list {
+  color: rgba(255, 255, 255, 0.6);
+  display: flex;
+  margin: 2rem;
+  align-items: center;
+}
+.accordion__text-one__list i {
+  font-size: 4rem;
+  margin-right: 1rem;
+  color: #fa9000;
+}
+.accordion__text-one__list p {
+  font-size: 1.5rem;
+}
+
+@media (max-width: 575px) {
+  .accordion__img {
+    background-image: url("../img/oferta-strony-indywidualne-mobilne.jpg");
+  }
+}
+@media (min-width: 574px) {
+  .accordion__text-one__list i {
+    font-size: 5rem;
+  }
+}
+@media (min-width: 576px) {
+  .accordion__img {
+    background-image: url("../img/oferta-strony-indywidualne.jpg");
+  }
+}
+@media (min-width: 768px) {
+  .accordion__text-one {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .accordion__text-one__list {
+    width: calc(50% - 10rem);
+    max-width: 350px;
+  }
+}
+.optimization {
+  margin: 2rem auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2rem auto;
+  gap: 10px;
+}
+.optimization__card {
+  width: calc(100% - 2rem);
+  padding: 3em;
+  border-radius: 20px;
+  background-image: linear-gradient(rgba(0, 41, 102, 0.274), rgba(2, 1, 19, 0.644)), url("../img/aplikacje-biznesowe-mobilne.jpg");
+  filter: brightness(85%);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  transition: background-color 0.5s, color 0.5s;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3098039216);
+  transition: color 1s ease;
+}
+.optimization__card:hover, .optimization__card:focus {
+  color: #07022e;
+  background-image: linear-gradient(rgba(0, 41, 102, 0.5), rgba(228, 227, 252, 0.904)), url("../img/aplikacje-biznesowe-mobilne.jpg");
+}
+.optimization__text {
+  font-size: 1.6rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.optimization__text-two {
+  color: #fa9000;
+  font-size: 1.8rem;
+}
+.optimization__span {
+  font-weight: bold;
+  font-size: 2.2rem;
+  padding: 20px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .optimization {
+    gap: 30px;
+  }
+  .optimization__card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(33.33% - 2rem);
+    min-height: 250px;
+    background-image: linear-gradient(rgba(0, 41, 102, 0.274), rgba(2, 1, 19, 0.644)), url("../img/aplikacje-biznesowe.jpg");
+  }
+  .optimization__card:hover, .optimization__card:focus {
+    color: #07022e;
+    background-image: linear-gradient(rgba(0, 41, 102, 0.5), rgba(228, 227, 252, 0.904)), url("../img/aplikacje-biznesowe-mobilne.jpg");
+  }
+  .optimization__text {
+    padding: 2rem 1rem;
+    font-size: 2rem;
+  }
+}
+.seo__img {
+  width: 100%;
+  height: 300px;
+  background-image: url("../img/pozycjonowanie-stron-mobilne.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.seo__text {
+  font-size: 1.6rem;
+  padding-top: 20px;
+  text-align: center;
+  line-height: 1.6;
+}
+.seo__text-two {
+  color: #fa9000;
+  font-size: 1.8rem;
+}
+
+@media (min-width: 574px) {
+  .seo {
+    padding: 1rem;
+  }
+  .seo__img {
+    width: 45%;
+    float: left;
+    margin: 30px;
+    background-image: url("../img/pozycjonowanie-stron.jpg");
+  }
+  .seo__text {
+    text-align: left;
+  }
+}
+.templates__img {
+  width: 100%;
+  height: 350px;
+  background-image: url("../img/szablony-stron-internetowych-mobilne.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.templates__text {
+  font-size: 1.6rem;
+  padding-top: 20px;
+  text-align: center;
+  line-height: 1.6;
+}
+.templates__text-two {
+  color: #fa9000;
+  font-size: 1.8rem;
+}
+
+@media (min-width: 574px) {
+  .templates {
+    padding: 1rem;
+  }
+  .templates__img {
+    width: 50%;
+    float: right;
+    margin: 30px;
+    background-image: url("../img/szablony-stron-internetowych.jpg");
+  }
+  .templates__text {
+    text-align: right;
+  }
+}
+.applications__img {
+  width: 100%;
+  height: auto;
+  height: 300px;
+  background-image: url("../img/aplikacje-bines-mobilne.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.applications__text {
+  font-size: 1.6rem;
+  padding-top: 20px;
+  text-align: center;
+  line-height: 1.6;
+}
+.applications__text-two {
+  color: #fa9000;
+  font-size: 1.8rem;
+}
+
+@media (min-width: 574px) {
+  .applications {
+    padding: 1rem;
+  }
+  .applications__img {
+    width: 55%;
+    float: left;
+    margin: 30px;
+    background-image: url("../img/aplikacje-bines.jpg");
+  }
+  .applications__text {
+    text-align: left;
+    padding: 30px;
+  }
+}
+.e-commerce__img {
+  width: 100%;
+  height: 260px;
+  background-image: url("../img/ecommerce-sklepy-mobilne.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.e-commerce__text {
+  font-size: 1.6rem;
+  padding-top: 20px;
+  text-align: center;
+  line-height: 1.6;
+}
+.e-commerce__text-two {
+  color: #fa9000;
+  font-size: 1.8rem;
+}
+
+@media (min-width: 574px) {
+  .e-commerce {
+    padding: 1rem;
+  }
+  .e-commerce__img {
+    width: 49%;
+    float: right;
+    margin: 30px;
+    background-image: url("../img/ecommerce-sklepy.jpg");
+  }
+  .e-commerce__text {
+    text-align: right;
+  }
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Abril Fatface", serif;
+  font-family: "Poppins", sans-serif;
+  background-color: #07022e;
+  scroll-behavior: smooth;
+  scroll-padding: 6rem;
+}
+
+.bodyScroll {
+  overflow: hidden;
+}
+
+html {
+  font-size: 10px;
+  color: rgba(247, 239, 229, 0.9176470588);
+}
+
+ul,
+ol {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  height: 4rem;
+}
+
+a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: rgba(247, 239, 229, 0.9176470588);
+  cursor: pointer;
+}
+
+h2,
+h1 {
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 3.5rem;
+}
+h1 span {
+  text-transform: lowercase;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+}
+
+@media (min-width: 574px) {
+  h1 {
+    font-size: 4.5rem;
+  }
+  h2 {
+    font-size: 4rem;
+  }
+}/*# sourceMappingURL=main.css.map */

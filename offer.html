@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+
+
+
+
+
+
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RoomOfCode</title>
+    <script src="https://kit.fontawesome.com/20217c5f00.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./sass/main.css" />
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body>
+    <!-- buttton super -->
+    <button class="mobile-nav__btn"
+        onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))"
+        aria-label="Main Menu">
+        <svg width="100" height="100" viewBox="0 0 100 100">
+            <path class="line line1"
+                d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+            <path class="line line2" d="M 20,50 H 80" />
+            <path class="line line3"
+                d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+        </svg>
+    </button>
+
+
+
+
+
+
+
+
+    <button class="phone-btn">
+        <a href="tel:+48111111111">
+            <svg xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" viewBox="0 0 24 24">
+                <g fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                    <path stroke-dasharray="64" stroke-dashoffset="64"
+                        d="M8 3C8.5 3 10.5 7.5 10.5 8C10.5 9 9 10 8.5 11C8 12 9 13 10 14C10.3943 14.3943 12 16 13 15.5C14 15 15 13.5 16 13.5C16.5 13.5 21 15.5 21 16C21 18 19.5 19.5 18 20C16.5 20.5 15.5 20.5 13.5 20C11.5 19.5 10 19 7.5 16.5C5 14 4.5 12.5 4 10.5C3.5 8.5 3.5 7.5 4 6C4.5 4.5 6 3 8 3Z">
+                        <animate fill="freeze" attributeName="stroke-dashoffset" dur="2.4s" values="64;0" />
+                        <animateTransform attributeName="transform" begin="2.4s;lineMdPhoneCallLoop0.begin+10.4s"
+                            dur="2s" type="rotate"
+                            values="0 12 12;15 12 12;0 12 12;-12 12 12;0 12 12;12 12 12;0 12 12;-15 12 12;0 12 12" />
+                    </path>
+                    <path stroke-dasharray="4" stroke-dashoffset="4"
+                        d="M14 7.04404C14.6608 7.34734 15.2571 7.76718 15.7624 8.27723M16.956 10C16.6606 9.35636 16.2546 8.77401 15.7624 8.27723"
+                        opacity="0">
+                        <set id="lineMdPhoneCallLoop0" attributeName="opacity"
+                            begin="2.8s;lineMdPhoneCallLoop0.begin+10.8s" to="1" />
+                        <animate fill="freeze" attributeName="stroke-dashoffset"
+                            begin="2.8s;lineMdPhoneCallLoop0.begin+10.8s" dur="0.8s" values="4;8" />
+                        <animate fill="freeze" attributeName="stroke-dashoffset"
+                            begin="5.2s;lineMdPhoneCallLoop0.begin+13.2s" dur="1.2s" values="0;4" />
+                        <set attributeName="opacity" begin="6.4s;lineMdPhoneCallLoop0.begin+14.4s" to="0" />
+                    </path>
+                    <path stroke-dasharray="10" stroke-dashoffset="10"
+                        d="M20.748 9C20.3874 7.59926 19.6571 6.347 18.6672 5.3535M15 3.25203C16.4105 3.61507 17.6704 4.3531 18.6672 5.3535"
+                        opacity="0">
+                        <set attributeName="opacity" begin="4s;lineMdPhoneCallLoop0.begin+12s" to="1" />
+                        <animate fill="freeze" attributeName="stroke-dashoffset"
+                            begin="4s;lineMdPhoneCallLoop0.begin+12s" dur="0.8s" values="10;20" />
+                        <animate fill="freeze" attributeName="stroke-dashoffset"
+                            begin="6s;lineMdPhoneCallLoop0.begin+14s" dur="1.2s" values="0;10" />
+                        <set attributeName="opacity" begin="7.2s;lineMdPhoneCallLoop0.begin+15.2s" to="0" />
+                    </path>
+                </g>
+            </svg>
+        </a>
+    </button>
+
+
+
+
+    <!-- end button phone -->
+
+
+
+
+    <!-- -------------------------------mobnile -->
+    <div class="mobile-navLogo">
+        <a href="#"><img src="./img/logo.svg" alt="logo Room Of Code" width="150"></a>
+
+
+    </div>
+    <nav class="mobile-nav">
+        <div>
+            <ul class="mobile-nav__list">
+                <li><a href="index.html">o nas</a></li>
+                <li><a href="offer.html">oferta</a></li>
+                <li><a href="#contact">kontakt</a></li>
+            </ul>
+        </div>
+        <!--------------------------------mobile end-->
+    </nav>
+    <!-- desktop!!!!! -->
+
+
+
+
+    <nav class="navigation">
+        <div class="navigation__logo">
+            <a href="#"><img src="./img/logo.svg" alt="logo Room Of Code" width="150"></a>
+
+
+        </div>
+        <div>
+            <ul class="navigation__list">
+                <li><a href="index.html">o nas</a></li>
+                <li><a href="offer.html" class="color-action">oferta</a></li>
+                <li><a href="#contact">kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+
+    <div class="offers-header"></div>
+
+
+
+
+    <main>
+        <section class="section">
+            <div class="section__title">
+                <div class="wrapper">
+                    <h2>nasze usługi</h2>
+                    <p>
+                        Nasza oferta skierowana jest do szerokiego grona przedsiębiorców, którzy w świadomy sposób
+                        podchodzą do prowadzonej przez siebie
+                        działalności. Dzięki prawie 20-letniemu doświadczeniu w
+                        prowadzeniu różnego rodzaju przedsiębiorstw, jak również
+                        znajomości technologii takich, jak: Swift, Objective-C, Kotlin,
+                        DevOps/CI/CD, AWS, Ruby, Python, JS, jak również licznych
+                        frameworków (React, Next.js, Ionic…) jesteśmy w stanie dobrać
+                        rozwiązanie, które sprawdzi się w Państwa przypadku. Z uwagi na
+                        bogate podłoże i doświadczenie biznesowe połączone ze znajomością
+                        zaawansowanej technologii do każdego potencjalnego przedsiębiorcy
+                        podchodzimy indywidualnie.<br />
+                        Jesteśmy świadomi potrzeby optymalizacji biznesowej, jak również
+                        obciążeń finansowych, które dotykają każdą osobę prowadzącą własną
+                        działalność. Każde proponowane rozwiązanie powinno uwzględniać
+                        głębię i specyfikę danego biznesu, prowadząc ostatecznie do
+                        zwiększenia wydajności i zysku przedsiębiorcy. <br /><span class="accordion__span">Zapraszamy do
+                            zapoznania się z kluczowymi obszarami naszych
+                            usług. </span><br /><span class="color-action accordion__span">W przypadku zaistnienia
+                            potrzeby na stworzenie produktów, które
+                            wykraczają poza poniższe ramy, zapraszamy do kontaktu.</span>
+                    </p>
+                </div>
+            </div>
+        </section>
+        <div class="offers-header2"></div>
+        <section class="accordion">
+            <div class="wrapper accordion__wrapper">
+                <div class="accordion__box">
+                    <button class="accordion__btn">
+                        indywidualne strony internetowe
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M13 12h7l-8 8l-8-8h7V4h2z" />
+                        </svg>
+                    </button>
+                    <div class="accordion__text-box">
+                        <p class="accordion__text">
+                            Poprzedzona głęboką analizą Twojego przedsiębiorstwa,
+                            indywidualnie stworzona zgodnie z Twoimi oczekiwaniami strona internetowa
+                            wyróżni Cię na tle konkurencji. Opierając się na najnowszych
+                            technologiach i uwzględniając charakterystyczne cechy Twojego
+                            biznesu, zaproponujemy Ci niepowtarzalne, unikatowe możliwości,
+                            dzięki którym przyciągniesz klientów do swojej firmy. Nie oferujemy szablonowego
+                            rozwiązania, lecz
+                            spersonalizowaną witrynę, spełniającą najbardziej wyszukane
+                            potrzeby biznesowe.<br />
+                            Każdy projekt jest tworzony od podstaw, dzięki czemu masz wpływ
+                            na najdrobniejszy szczegół, co w dzisiejszych czasach jest
+                            kluczowe dla pozyskiwania i podtrzymywania stałej uwagi Twoich
+                            klientów. Oprócz aspektów estetycznych celem strony jest
+                            generowanie zysku, co może być zagwarantowane wyłącznie dzięki
+                            zrozumieniu specyfiki danego biznesu i wykorzystaniu
+                            odpowiednich, pasujących do niego rozwiązań technologicznych.
+                        </p>
+                        <p class="accordion__text1">Nasz proces wygląda następująco:</p>
+                        <div class="accordion__text-one">
+                            <div class="accordion__text-one__list">
+                                <i class="fa-solid fa-1"></i>
+                                <p>
+                                    Powiedz nam o swoich oczekiwaniach i celach, które Cię
+                                    interesują.
+                                </p>
+                            </div>
+                            <div class="accordion__text-one__list">
+                                <i class="fa-solid fa-2"></i>
+                                <p>
+                                    Analizujemy profil i cechy Twojego biznesu w celu
+                                    dopasowania najlepszych dla Ciebie rozwiązań.
+                                </p>
+                            </div>
+                            <div class="accordion__text-one__list">
+                                <i class="fa-solid fa-3"></i>
+                                <p>Przedstawiamy wstępną ofertę.</p>
+                            </div>
+                            <div class="accordion__text-one__list">
+                                <i class="fa-solid fa-4"></i>
+                                <p>Akceptujesz przedstawioną ofertę.</p>
+                            </div>
+                            <div class="accordion__text-one__list">
+                                <i class="fa-solid fa-5"></i>
+                                <p>Realizujemy zaakceptowaną przez Ciebie ofertę.</p>
+                            </div>
+                            <div class="accordion__text-one__list">
+                                <i class="fa-solid fa-6"></i>
+                                <p>
+                                    Startujemy z projektem. Zawsze jesteśmy w kontakcie celem
+                                    nieustannego polepszania jakości naszych usług. Wychodzimy z
+                                    założenia, że jeśli spełnimy Twoje oczekiwania, polecisz nas
+                                    innym.
+                                </p>
+                            </div>
+                        </div>
+                        <p class="accordion__text color-action">
+                            Oferta skierowana jest do osób, które chcą się wyróżnić na tle konkurencji i zwiększać
+                            liczbę swoich klientów.</p>
+                        </p>
+                        <div class="accordion__img"></div>
+                    </div>
+                </div>
+
+
+
+
+                <div class="accordion__box">
+                    <button class="accordion__btn">
+                        Gotowe strony do wyboru
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M13 12h7l-8 8l-8-8h7V4h2z" />
+                        </svg>
+                    </button>
+                    <div class="accordion__text-box templates">
+                        <div class="templates__img"></div>
+                        <div class="templates__texts">
+                            <p class="templates__text ">Dla przedsiębiorców, którym potrzebna jest strona
+                                wyłącznie w
+                                celach wizerunkowych, oferujemy gotowe atrakcyjne cenowo
+                                rozwiązania. Stworzone przez nas szablony stron są starannie
+                                projektowane,
+                                zapewniają
+                                wyjątkowość i ekskluzywność.</p>
+
+
+                            <p class="templates__text ">Dzięki naszym gotowym projektom
+                                możesz błyskawicznie uruchomić profesjonalnie wyglądającą
+                                stronę, która jest przyjazna dla użytkowników i łatwa w
+                                obsłudze. Idealne rozwiązanie dla tych, którzy cenią sobie
+                                czas i jakość, bez potrzeby dużych inwestycji.Wybierz nasze
+                                szablony i dołącz do grona zadowolonych klientów, którzy z
+                                sukcesem rozwijają swoją działalność online. </p>
+
+
+                            <p class="templates__text templates__text-two">
+                                Oferta skierowana do osób, którym zależy głównie na subtelnym i eleganckim potwierdzeniu
+                                istnienia swojego przesiębiorstwa w Internecie w atrakcyjnej cenie.</p>
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+                <div class="accordion__box">
+                    <button class="accordion__btn">
+                        Aplikacje natywne
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M13 12h7l-8 8l-8-8h7V4h2z" />
+                        </svg>
+                    </button>
+                    <div class="accordion__text-box applications">
+                        <div class="applications__img"><img src="./img/aplikacje-bines.jpeg" alt=""></div>
+                        <p class="applications__text ">
+                            W dzisiejszym świecie technologii Twoja firma zasługuje na
+                            aplikację, która nie tylko wyróżni się na tle konkurencji, ale
+                            zacznie przynosić Ci wymierne zyski. Nasze usługi tworzenia
+                            aplikacji natywnych i ogólnych są dostosowane do Twoich
+                            indywidualnych potrzeb. Projektujemy intuicyjne, wydajne i
+                            atrakcyjne aplikacje, które angażują użytkowników i przynoszą
+                            realne wyniki biznesowe. Niezależnie od tego, czy potrzebujesz
+                            aplikacji cross-platformowej, Androida, czy na iOS, nasz zespół
+                            ekspertów zapewni Ci rozwiązanie idealnie dopasowane do Twoich
+                            wymagań.
+                        </p>
+                        <p class="applications__text applications__text-two">Oferta skierowana jest do przesiębiorców,
+                            którzy szukają możliwośći zwielokrotnienia swoich
+                            zysków. Ideane rozwiązanie dla firm, które potrzebują płynnego, niezawodnego działania i
+                            zaawansowanych funkcji.</p>
+                    </div>
+                </div>
+                <div class="accordion__box">
+                    <button class="accordion__btn">
+                        e-commerce
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M13 12h7l-8 8l-8-8h7V4h2z" />
+                        </svg>
+                    </button>
+                    <div class="accordion__text-box e-commerce">
+                        <div class="e-commerce__img"></div>
+
+
+
+
+
+
+
+
+                        <p class="e-commerce__text">
+                            Na rynku e-commerce, który cechuje wysoki poziom konkurencji,
+                            kluczowym elementem sukcesu jest posiadanie profesjonalnego,
+                            funkcjonalnego i intuicyjnego dla użytkownika sklepu
+                            internetowego. Nasze usługi projektowania sklepów e-commerce i
+                            aplikacji są dopasowane do indywidualnych potrzeb Twojej firmy.
+                            Oferujemy kompleksowe rozwiązania - od przyjaznych i
+                            funkcjonalnych interfejsów, po zaawansowane funkcje zarządzania
+                            i bezpieczeństwa. Nasze aplikacje e-commerce zapewniają
+                            przyjazne doświadczenia zakupowe, zwiększają lojalność klientów
+                            i napędzają sprzedaż. Dobrze zaprojektowany, szybko działający i
+                            atrakcyjny wizualnie sklep internetowy, wyznacza standard dla
+                            Twojego biznesu, co ma przełożenie na liczbę zadowolonych klientów.
+                        </p>
+                        <p class="e-commerce__text e-commerce__text-two">Ofertę kierujemy do klientów, którzy chcą
+                            zwielokrotnić zysk z prowadzonego przez siebie
+                            sklepu internetowego, rozbudowując funkcje i koncepcję swojego biznesu, jak również dla
+                            osób,
+                            które chciałyby spróbować przygody z e-commerce</p>
+                    </div>
+                </div>
+                <div class="accordion__box">
+                    <button class="accordion__btn">
+                        optymalizacja dla biznesu
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M13 12h7l-8 8l-8-8h7V4h2z" />
+                        </svg>
+                    </button>
+                    <div class="accordion__text-box">
+                        <p class="accordion__text">
+                            Przedsiębiorcy prowadzący już dłuższy czas działalność
+                            gospodarczą zdają sobie sprawę z konieczności stałej
+                            optymalizacji biznesowej. Nasza oferta jest skierowana do firm,
+                            które chcą zmaksymalizować swoją wydajność i konkurencyjność na
+                            rynku.<br />
+                        <p class="optimization__span">W ramach naszych usług oferujemy:</p>
+
+
+
+
+
+
+
+
+                        </p>
+                        <div class="optimization">
+                            <div class="optimization__card">
+                                <p class="optimization__text">
+                                    analizę i usprawnienie procesów biznesowych
+                                </p>
+                            </div>
+                            <div class="optimization__card">
+                                <p class="optimization__text">
+                                    wdrożenie zaawansowanych technologii IT
+                                </p>
+                            </div>
+                            <div class="optimization__card">
+                                <p class="optimization__text">
+                                    strategie zwiększające efektywność operacyjną
+                                </p>
+                            </div>
+                        </div>
+                        <p class="accordion__text">
+                            Dzięki wieloletniemu prowadzeniu firmy jesteśmy wyczuleni na
+                            potrzebę identyfikacji obszarów wymagających poprawy,
+                            automatyzacji zadań oraz implementacji nowoczesnych rozwiązań,
+                            które przyczynią się do wzrostu produktywności, poprawy
+                            zarządzania danymi i zwiększenia ogólnej rentowności
+                            działalności. Zapraszamy do kontaktu, aby poznać szczegóły
+                            naszej oferty i rozpocząć transformację Twojego biznesu.
+                        </p>
+                        <p class="accordion__text optimization__text-two">Zaawansowane narzędzia opierające się na
+                            najnowszych
+                            rozwiązaniach IT skierowane są do
+                            przedsiębiorców prowadzących już działalność gospodarczą, których celem jest maksymalizacja
+                            zysku, oszczędność wykorzystywanych zasobów i dalszy rozwój biznesu</p>
+                    </div>
+                </div>
+                <div class="accordion__box">
+                    <button class="accordion__btn">
+                        seo
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M13 12h7l-8 8l-8-8h7V4h2z" />
+                        </svg>
+                    </button>
+                    <div class="accordion__text-box seo">
+                        <div class="seo__img"></div>
+
+
+
+
+
+
+
+
+                        <p class=" seo__text">
+                            Nasza oferta usług SEO jest skierowana do firm, które pragną
+                            zwiększyć swoją widoczność online i przyciągnąć do siebie więcej klientów.
+                            Oferujemy kompleksową optymalizację zarówno pod kątem
+                            technicznym, jak i atrakcyjną, dopasowaną do profilu danej firmy
+                            treść, np.: analizę słów kluczowych poprzez identyfikację fraz, które
+                            są najbardziej efektywne dla Twojego biznesu. Dostosowujemy również Twoją stronę, aby była
+                            przyjazna dla
+                            wyszukiwarek i użytkowników. Od początku dbamy o wysokiej
+                            jakości kod. Analzujemy i doradzamy w zakresie przyjętej przez Ciebie strategii komunikacji
+                            z
+                            klientem. Tworzymy wartościowe i angażujące
+                            treści, które poprawiają ranking Twojej strony i zwiększają na niej ruch.
+                            Monitorujemy i analizujemy postępy z zakresu zwiększania ilości odwiedzin, dostarczając
+                            szczegółowe raporty. Nasze usługi SEO są dostosowane
+                            do indywidualnych potrzeb i celów każdego klienta, aby zapewnić
+                            maksymalną efektywność działań marketingowych w Internecie.
+                        </p> <br />
+                        <p class="seo__text seo__text-two">Oferta jest skierowana do osób, które są zainteresowane
+                            poszerzeniem swojej obecności w Internecie i promowaniem swojej marki.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- --------------start------------ -->
+        <section class="contact" id="contact">
+            <div class="contact__title">
+                <h2>kontakt</h2>
+            </div>
+            <div class="wrapper contact__wrapper">
+                <address class="contact__text">
+                    <p>
+                        Zapraszamy do kontaktu telefonicznego <br />
+                        od poniedziałku do piątku
+                    </p>
+                    <p>W godzinach: 10:00 - 18:00</p>
+                    <a class="contact__text-link" href="mailto:info@devstudio.com">
+                        <i class="fa-solid fa-envelope"></i>
+                        info@roomofcode.com</a>
+                    <a class="contact__text-link" href="tel:+48111111111">
+                        <i class="fa-solid fa-phone"></i>
+                        +48 111 111 111</a>
+                    <h3>Bartosz Piech</h3>
+                </address>
+            </div>
+        </section>
+    </main>
+    <!-- --------------end------------ -->
+    <!-- --------------start------------ -->
+    <!-- <footer class="footer">
+        <p class="footer__text">
+            &copy; <span class="footer__year"></span> Room Of Code
+        </p>
+    </footer> -->
+
+
+    <footer class="footer">
+        <p class="footer__text">
+            &copy; <span class="footer__year"></span> <a href="#"><img src="./img/logo.svg" width="150"></a>
+        </p>
+    </footer>
+
+    <!-- -------------end------------- -->
+
+
+
+
+    <script src="index.js"></script>
+</body>
+
+
+
+
+
+
+
+
+</html>

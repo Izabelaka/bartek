@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RoomOfCode</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:wght@100;300;400;700&display=swap"
+        rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/20217c5f00.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./sass/main.css" />
+</head>
+
+
+<body>
+    <!-- buttton super -->
+
+
+    <button class="mobile-nav__btn"
+        onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))"
+        aria-label="Main Menu">
+        <svg width="100" height="100" viewBox="0 0 100 100">
+            <path class="line line1"
+                d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+            <path class="line line2" d="M 20,50 H 80" />
+            <path class="line line3"
+                d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327
+          90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+        </svg>
+    </button>
+
+
+    <button class="phone-btn">
+        <a href="tel:+48111111111">
+            <svg xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" viewBox="0 0 24 24">
+                <g fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                    <path stroke-dasharray="64" stroke-dashoffset="64"
+                        d="M8 3C8.5 3 10.5 7.5 10.5 8C10.5 9 9 10 8.5 11C8 12 9 13 10 14C10.3943 14.3943 12 16 13 15.5C14 15 15 13.5 16 13.5C16.5 13.5 21 15.5 21 16C21 18 19.5 19.5 18 20C16.5 20.5 15.5 20.5 13.5 20C11.5 19.5 10 19 7.5 16.5C5 14 4.5 12.5 4 10.5C3.5 8.5 3.5 7.5 4 6C4.5 4.5 6 3 8 3Z">
+                        <animate fill="freeze" attributeName="stroke-dashoffset" dur="2.4s" values="64;0" />
+                        <animateTransform attributeName="transform" begin="2.4s;lineMdPhoneCallLoop0.begin+10.4s"
+                            dur="2s" type="rotate"
+                            values="0 12 12;15 12 12;0 12 12;-12 12 12;0 12 12;12 12 12;0 12 12;-15 12 12;0 12 12" />
+                    </path>
+                    <path stroke-dasharray="4" stroke-dashoffset="4"
+                        d="M14 7.04404C14.6608 7.34734 15.2571 7.76718 15.7624 8.27723M16.956 10C16.6606 9.35636 16.2546 8.77401 15.7624 8.27723"
+                        opacity="0">
+                        <set id="lineMdPhoneCallLoop0" attributeName="opacity"
+                            begin="2.8s;lineMdPhoneCallLoop0.begin+10.8s" to="1" />
+                        <animate fill="freeze" attributeName="stroke-dashoffset"
+                            begin="2.8s;lineMdPhoneCallLoop0.begin+10.8s" dur="0.8s" values="4;8" />
+                        <animate fill="freeze" attributeName="stroke-dashoffset"
+                            begin="5.2s;lineMdPhoneCallLoop0.begin+13.2s" dur="1.2s" values="0;4" />
+                        <set attributeName="opacity" begin="6.4s;lineMdPhoneCallLoop0.begin+14.4s" to="0" />
+                    </path>
+                    <path stroke-dasharray="10" stroke-dashoffset="10"
+                        d="M20.748 9C20.3874 7.59926 19.6571 6.347 18.6672 5.3535M15 3.25203C16.4105 3.61507 17.6704 4.3531 18.6672 5.3535"
+                        opacity="0">
+                        <set attributeName="opacity" begin="4s;lineMdPhoneCallLoop0.begin+12s" to="1" />
+                        <animate fill="freeze" attributeName="stroke-dashoffset"
+                            begin="4s;lineMdPhoneCallLoop0.begin+12s" dur="0.8s" values="10;20" />
+                        <animate fill="freeze" attributeName="stroke-dashoffset"
+                            begin="6s;lineMdPhoneCallLoop0.begin+14s" dur="1.2s" values="0;10" />
+                        <set attributeName="opacity" begin="7.2s;lineMdPhoneCallLoop0.begin+15.2s" to="0" />
+                    </path>
+                </g>
+            </svg>
+        </a>
+    </button>
+
+
+    <!-- end button phone -->
+
+
+    <!-- -------------------------------mobnile -->
+    <div class="mobile-navLogo">
+        <a href="#"><img src="./img/logo.svg" alt="logo Room Of Code" width="150"></a>
+    </div>
+    <nav class="mobile-nav">
+        <!-- <div class="mobile-nav__logo">
+            <a href="#">Room Of Code</a>
+        </div> -->
+
+
+        <div>
+            <ul class="mobile-nav__list">
+                <li><a href="index.html">o nas</a></li>
+                <li><a href="offer.html">oferta</a></li>
+                <li><a href="#contact">kontakt</a></li>
+            </ul>
+        </div>
+        <!--------------------------------mobile end-->
+    </nav>
+    <!-- desktop!!!!! -->
+
+
+    <nav class="navigation">
+        <div class="navigation__logo">
+            <a href="#"><img src="./img/logo.svg" alt="logo Room Of Code" width="150"></a>
+        </div>
+        <div>
+            <ul class="navigation__list">
+                <li><a href="index.html" class="color-action">o nas</a></li>
+                <li><a href="offer.html">oferta</a></li>
+                <li><a href="#contact">kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- desktop end!!!!!! -->
+    <!-- <header>
+        <div class="header-img">
+            <div class="header-text">
+            </div>
+            <div class="header-bg"></div>
+        </div>
+    </header> -->
+
+
+    <div class="video-header">
+        <video autoplay loop muted playsinline>
+            <source src="img/ouroffer.mp4" type="video/mp4" />
+        </video>
+    </div>
+
+
+    <main>
+        <section class="section">
+            <div class="section__title">
+                <div class="wrapper">
+                    <h2>o nas</h2>
+                    <p>
+                        Zastosowanie rozwiązań technologicznych powinno przekładać się na
+                        siłę oddziaływania biznesu na otoczenie. Wykorzystanie technologii
+                        bez kompleskowego uwzględnienia specyfiki przedsiębiorstwa nie
+                        przyniesie oczekiwanego zwrotu z inwestycji. Dzięki wieloletniemu
+                        doświadczeniu w prowadzeniu różnego rodzaju projektów biznesowch wychodzimy z założenia, że
+                        najważnejsza jest efektywność danej
+                        technologii, której osiągnięcie możliwe jest wyłącznie po dokładnej analizie
+                        każdego przypadku. Każda firma jest inna, a celem
+                        proponowanych przez nas rozwiązań jest zwielokrotnienie zysku i
+                        bezpieczeństwa Państwa biznesu. <br />
+                        Zapraszamy do zapoznania się z
+                        naszym zakresem usług.
+                    </p>
+                    <p>Zespół Room Of Code</p>
+
+                </div>
+            </div>
+        </section>
+
+
+        <div class="main-header"></div>
+
+
+        <section class="section">
+            <div class="section__title">
+                <div class="wrapper">
+                    <h1>
+                        Nowoczesne Strony Internetowe <br /><span>i</span>
+                        E-commerce<br />
+                        <span class="color-action">- więcej klientów</span>
+                    </h1>
+                </div>
+            </div>
+
+
+            <div>
+                <p>
+                    Założeniem wykorzystania technologii jest generowwanie zysku.<br />
+                    Odkryj, co możemy Ci zaproponować...
+                </p>
+            </div>
+        </section>
+
+
+        <div class="section">
+            <div class="wrapper wrapper_cards_bg">
+                <div class="cards">
+                    <div class="cards__card cards__bgWeb">
+                        <i class="cards__button fa-solid fa-info" role="button" tabindex="0"></i>
+                        <div class="cards__text">
+                            <h2>indywidualne strony internetowe</h2>
+                            <p>
+                                Niepowtarzalne i indywidualnie zaprojektowane strony
+                                internetowe dostosowane pod...
+                            </p>
+                        </div>
+                        <button class="textButton">więcej</button>
+                    </div>
+                    <div class="cards__card cards__bgWebs">
+                        <i class="cards__button fa-solid fa-info" role="button" tabindex="0"></i>
+                        <div class="cards__text">
+                            <h2>Gotowe strony do wyboru</h2>
+                            <p>Dla przedsiębiorców, którzy cenią sobie estetykę i chcą...</p>
+                        </div>
+                        <button class="textButton">więcej</button>
+                    </div>
+                    <div class="cards__card cards__bgApp">
+                        <i class="cards__button fa-solid fa-info" role="button" tabindex="0"></i>
+                        <div class="cards__text">
+                            <h2>Aplikacje natywne</h2>
+                            <p>
+                                To programy stworzone specjalnie dla konkretnego systemu...
+                            </p>
+                        </div>
+                        <button class="textButton">więcej</button>
+                    </div>
+                    <div class="cards__card cards__bgEcommerce">
+                        <i class="cards__button fa-solid fa-info" role="button" tabindex="0"></i>
+                        <div class="cards__text">
+                            <h2>e-commerce</h2>
+                            <p>
+                                Decyzja o zastosowaniu najlepszego rozwiązania do sprzedaży
+                                swoich...
+                            </p>
+                        </div>
+                        <button class="textButton">więcej</button>
+                    </div>
+                    <div class="cards__card cards__bgBusiness">
+                        <i class="cards__button fa-solid fa-info" role="button" tabindex="0"></i>
+                        <div class="cards__text">
+                            <h2>optymalizacja dla biznesu</h2>
+                            <p>
+                                Charakterystyczną cechą każdego przedsiębiorstwa jest jego
+                                unikatowość...
+                            </p>
+                        </div>
+                        <button class="textButton">więcej</button>
+                    </div>
+                    <div class="cards__card cards__bgSeo">
+                        <i class="cards__button fa-solid fa-info" role="button" tabindex="0"></i>
+
+
+                        <div class="cards__text">
+                            <h2>seo</h2>
+                            <p>
+                                Pozycjonowanie i wyróżnianie się w Internecie ma kluczowe
+                                znaczenie w...
+                            </p>
+                        </div>
+                        <button class="textButton">więcej</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- tu powinno byc main -->
+
+
+        <section class="contact" id="contact">
+            <div class="contact__title">
+                <h2>kontakt</h2>
+            </div>
+            <div class="wrapper contact__wrapper">
+                <address class="contact__text">
+                    <p>
+                        Zapraszamy do kontaktu telefonicznego <br />
+                        od poniedziałku do piątku
+                    </p>
+                    <p>W godzinach: 10:00 - 18:00</p>
+                    <a class="contact__text-link" href="mailto:info@devstudio.com">
+                        <i class="fa-solid fa-envelope"></i>
+                        info@roomofcode.com</a>
+                    <a class="contact__text-link" href="tel:+48111111111">
+                        <i class="fa-solid fa-phone"></i>
+                        +48 111 111 111</a>
+                    <h3>Bartosz Piech</h3>
+                </address>
+            </div>
+        </section>
+    </main>
+    <!-- --------------end------------ -->
+    <!-- --------------start------------ -->
+
+
+    <!-- <footer class="footer">
+        <p class="footer__text">
+            &copy; <span class="footer__year"></span> <a href="#"><img src="./img/logo.svg" alt="logo Room Of Code"
+                    width="150"></a>
+        </p>
+    </footer> -->
+
+    <footer class="footer">
+        <p class="footer__text">
+            &copy; <span class="footer__year"></span> <a href="#"><img src="./img/logo.svg" width="150"></a>
+        </p>
+    </footer>
+
+    <!-- -------------end------------- -->
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>

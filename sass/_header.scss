@@ -1,0 +1,81 @@
+@use "./colors" as colors;
+.video-header {
+	position: relative;
+	overflow: hidden;
+	height: 60rem;
+	z-index: -1;
+}
+
+.video-header video {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.main-header {
+	filter: brightness(85%);
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	height: 500px;
+}
+
+.offers-header {
+	background-image: url("../img/oferta-strony-internetowe.jpeg");
+	filter: brightness(85%);
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	height: 600px;
+}
+
+.offers-header2 {
+	// background-image: linear-gradient(rgba(22, 2, 77, 0.44), rgba(2, 1, 19, 0.84)),
+	background-image: url("../img/aplikacje-strony-internetowe.jpeg");
+	filter: brightness(85%);
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	height: 400px;
+}
+
+@media (max-width: 575px) {
+	.main-header {
+		background-image: url("../img/stronyinternetowe-mobilne.jpg");
+		// filter: brightness(85%);
+		// background-size: cover;
+		// background-position: center;
+		// background-attachment: fixed;
+		// height: 500px;
+	}
+
+	.offers-header {
+		background-image: url("../img/oferta-strony-internetowe-mobilne.jpg");
+	}
+}
+@media (min-width: 576px) {
+	.main-header {
+		background-image: url("../img/stronyinternetowe.jpg");
+	}
+	.offers-header {
+		background-image: url("../img/oferta-strony-internetowe.jpg");
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.offers-header {
+		background-attachment: scroll;
+		background-size: 100% auto;
+		background-position: top center;
+	}
+}
+
+// @media (min-width: 769px) {
+// 	.offers-header {
+// 		filter: brightness(85%);
+// 		background-size: cover;
+// 		background-position: center;
+// 		background-attachment: fixed;
+// 		height: 600px;
+// 	}
+// }
